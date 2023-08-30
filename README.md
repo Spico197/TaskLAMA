@@ -1,4 +1,4 @@
-# 🛰️ TaskLAMA
+# 🚩 TaskLAMA
 
 This is an **unoffical** implementation of TaskLAMA.
 
@@ -13,15 +13,25 @@ Huggingface data link: [[link]](https://huggingface.co/datasets/Spico/TaskLAMA) 
 
 Below lists the statistics of the test data.
 
-An complex example of "Task: ake coconut rice - Assumption: Making coconut rice with ghee. - 15 steps"
+- An complex example of "Task: ake coconut rice - Assumption: Making coconut rice with ghee. - 15 steps"
 
 ![Complex Example](./docs/figs/complex-example.png) .
 
-|#Task|#Task w/ line-order steps|#Task w/ DAG-order steps|
-|-:|-:|-:|
-|478|341|137|
+- Task statistics
+
+| #Task | #Task w/ line-order steps | #Task w/ DAG-order steps | #Task w/o Assumption |
+| ----: | ------------------------: | -----------------------: | -------------------: |
+|   478 |                       341 |                      137 |                   12 |
+
+- The number of steps in test set
 
 ![the number of steps in test set](./docs/figs/test-step-num-hist.png)
+
+- The number of DAG roots (initial steps)
+
+![the number of DAG roots (initial steps)](./docs/figs/test-dag-root.png)
+
+- The distribution of DAG width and depth
 
 ![the distribution of DAG width](./docs/figs/test-dag-width.png)
 
@@ -31,7 +41,7 @@ An complex example of "Task: ake coconut rice - Assumption: Making coconut rice 
 
 ```bibtex
 @misc{yuan2023tasklama,
-      title={TaskLAMA: Probing the Complex Task Understanding of Language Models}, 
+      title={TaskLAMA: Probing the Complex Task Understanding of Language Models},
       author={Quan Yuan and Mehran Kazemi and Xin Xu and Isaac Noble and Vaiva Imbrasaite and Deepak Ramachandran},
       year={2023},
       eprint={2308.15299},
